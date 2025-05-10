@@ -5,7 +5,7 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Document</title>
-   <link rel="stylesheet" href="style.css">
+   <!-- <link rel="stylesheet" href="style.css"> -->
 </head>
 
 <body>
@@ -1014,6 +1014,90 @@
       <li><span>Item 999</span></li>
       <li><span>Item 1000</span></li>
    </ul>
+
+   <style>
+      body {
+         font-family: 'Segoe UI', sans-serif;
+         background: linear-gradient(to right, #f0f0f0, #ffffff);
+         margin: 0;
+         padding: 2rem;
+         animation: bgShift 10s infinite alternate;
+      }
+
+      h1 {
+         color: #333;
+         text-align: center;
+         text-transform: uppercase;
+         letter-spacing: 2px;
+         animation: pulseText 3s infinite;
+      }
+
+      ul {
+         display: grid;
+         grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+         gap: 0.5rem;
+         padding: 0;
+         list-style: none;
+         max-width: 90vw;
+         margin: auto;
+      }
+
+      li {
+         background: #fff;
+         border: 1px solid #ddd;
+         border-radius: 8px;
+         padding: 0.5rem;
+         text-align: center;
+         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+         transition: all 0.3s ease;
+      }
+
+      li:hover {
+         background: #f0faff;
+         transform: scale(1.05);
+         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+      }
+
+      span {
+         display: block;
+         font-weight: bold;
+         color: #555;
+         font-size: 0.9rem;
+      }
+
+      li:nth-child(odd) span {
+         color: #0077cc;
+      }
+
+      li:nth-child(even) span {
+         color: #cc0077;
+      }
+
+      @keyframes bgShift {
+         from {
+            background-position: 0% 0%;
+         }
+
+         to {
+            background-position: 100% 100%;
+         }
+      }
+
+      @keyframes pulseText {
+
+         0%,
+         100% {
+            color: #333;
+            transform: scale(1);
+         }
+
+         50% {
+            color: #555;
+            transform: scale(1.05);
+         }
+      }
+   </style>
+
 </body>
 <script src="script.js"></script>
 
